@@ -1,0 +1,81 @@
+body {
+    background-image: url("fondo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    overflow-x: hidden;
+}
+  
+.titulos {
+    color:white;
+    background-color: black;
+    display: inline-block;
+}
+
+#contacto {
+    align-content: end;
+}
+
+.container {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: 0;
+    width: 100%;
+}
+
+#italica {
+    font-style: italic;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-top: 10%;
+}
+
+ul {
+    width: 170px;
+    list-style: none;
+    background-color: #79473a;
+    border-radius: 10px;
+}
+
+li {
+    padding: 15px 15%;
+}
+
+@media screen and (max-width: 760px) {
+    .col-lg-2 {
+        width:35%;
+    }
+}
+
+@media screen and (min-width: 760px) {
+    .col-lg-2 {
+        width:30%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .col-lg-2 {
+        width:24%;
+    }
+}
+
+@media screen and (min-width: 1120) {
+    .col-lg-2 {
+        width:20%;
+    }
+}
+
+@media screen and (min-width: 1200) {
+    .col-lg-2 {
+        width:18%;
+    }
+}
+
+@media screen and (min-width: 1380) {
+    .col-lg-2 {
+        width:15%;
+    }
+}
