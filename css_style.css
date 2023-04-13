@@ -44,6 +44,13 @@ li {
     padding: 15px 15%;
 }
 
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+
 @media screen and (max-width: 760px) {
     .col-lg-2 {
         width:35%;
