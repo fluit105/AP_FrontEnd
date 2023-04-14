@@ -13,8 +13,34 @@ body {
     display: inline-block;
 }
 
+/* @media screen and (min-width: 1200px) {
+    .h1 {
+        font-size: 56px;
+    }
+
+    .h2 {
+        font-size: 32px;
+    }
+} */
+
 #contacto {
     align-content: end;
+}
+
+.foto-container {
+    padding: 5%;
+    max-height: 50%;
+    width: auto;
+}
+
+#foto {
+    border-radius: 5%;
+    overflow: hidden;
+}
+
+.indice {
+    font-size: auto;
+    padding: 5%;
 }
 
 .container {
@@ -52,42 +78,4 @@ footer {
 
 #main-container {
     min-height: calc(100vh - 200px);
-}
-
-
-
-@media screen and (max-width: 760px) {
-    .col-lg-2 {
-        width: 35%;
-    }
-}
-
-@media screen and (min-width: 760px) {
-    .col-lg-2 {
-        width: 30%;
-    }
-}
-
-@media screen and (min-width: 992px) {
-    .col-lg-2 {
-        width: 24%;
-    }
-}
-
-@media screen and (min-width: 1120) {
-    .col-lg-2 {
-        width: 20%;
-    }
-}
-
-@media screen and (min-width: 1200) {
-    .col-lg-2 {
-        width: 18%;
-    }
-}
-
-@media screen and (min-width: 1380) {
-    .col-lg-2 {
-        width: 15%;
-    }
 }
