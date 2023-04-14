@@ -13,15 +13,28 @@ body {
     display: inline-block;
 }
 
-/* @media screen and (min-width: 1200px) {
-    .h1 {
-        font-size: 56px;
+@media screen and (min-width: 992px) and (max-width: 1230px) {
+    @media screen and (min-width: 992px) {
+        #conocimientos {
+            font-size: 18px;
+        }
     }
-
-    .h2 {
-        font-size: 32px;
+    @media screen and (min-width: 992px) {
+        #conocimientos {
+            font-size: 18px;
+        }
     }
-} */
+    @media screen and (min-width: 1072px) {
+        #conocimientos {
+            font-size: 20.4px;
+        }
+    }
+    @media screen and (min-width: 1152px) {
+        #conocimientos {
+            font-size: 22px;
+        }
+    }
+}
 
 #contacto {
     align-content: end;
@@ -29,7 +42,6 @@ body {
 
 .foto-container {
     padding: 5%;
-    max-height: 50%;
     width: auto;
 }
 
@@ -38,9 +50,19 @@ body {
     overflow: hidden;
 }
 
-.indice {
-    font-size: auto;
-    padding: 5%;
+.index-container {
+    margin: 5%;
+    background-color: #79473a;
+}
+
+ul {
+    list-style: none;
+}
+
+li a {
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
@@ -57,17 +79,6 @@ body {
 h1 {
     font-size: 3.5rem;
     margin-top: 10%;
-}
-
-ul {
-    width: 170px;
-    list-style: none;
-    background-color: #79473a;
-    border-radius: 10px;
-}
-
-li {
-    padding: 15px 15%;
 }
 
 footer {
