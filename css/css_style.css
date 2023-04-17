@@ -19,16 +19,13 @@ body {
             font-size: 18px;
         }
     }
-    @media screen and (min-width: 992px) {
-        #conocimientos {
-            font-size: 18px;
-        }
-    }
+
     @media screen and (min-width: 1072px) {
         #conocimientos {
             font-size: 20.4px;
         }
     }
+
     @media screen and (min-width: 1152px) {
         #conocimientos {
             font-size: 22px;
@@ -40,9 +37,20 @@ body {
     align-content: end;
 }
 
-.foto-container {
-    padding: 5%;
-    width: auto;
+@media (max-width: 767px) or (min-width: 992px) {
+    .foto-container {
+        padding: 5%;
+        width: auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .foto-container {
+        padding-top: 5%;
+        padding-bottom: 5%;
+        padding-left: calc(4rem + 5%);
+        padding-right: calc(4rem + 5%);
+    }
 }
 
 #foto {
