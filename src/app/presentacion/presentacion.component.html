@@ -1,0 +1,25 @@
+<div class="container-fluid p-0">
+	<div class="row align-items-center m-0">
+		<div class="col-12 col-lg-10">
+			<!-- Presentacion -->
+			<p class="titulos display-2 mt-3">{{infoBasica?.name}}</p>
+			<br>
+			<p class="titulos h2">{{infoBasica?.ocupacion}}</p>
+			<br>
+			<p class="titulos italica h2">{{infoBasica?.nivel}}</p>
+			<!-- Resumen Personal -->
+			<div class="resumen mt-5 d-block pr-3">
+				<h1 class="titulos m-0">Resumen personal</h1>
+				<p class="titulos" style="white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -o-pre-wrap;">
+					{{infoBasica?.resumen}}
+				</p>
+			</div>
+		</div>
+		<div class="col-12 col-lg-2">
+			<!-- Foto -->
+			<div class="foto-container align-items-center">
+				<img [src]="infoBasica?.foto_perfil" id="foto" class="img-fluid" alt="Foto de Santiago Valdez">
+			</div>
+		</div>
+	</div>
+</div>

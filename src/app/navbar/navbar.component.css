@@ -1,0 +1,8 @@
+.nav-link {
+	font-weight: normal;
+	font-size: larger;
+}
+
+.selected {
+	font-weight: bolder;
+}

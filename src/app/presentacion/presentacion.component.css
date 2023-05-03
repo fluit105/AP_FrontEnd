@@ -1,0 +1,10 @@
+.foto-container {
+  padding: 5%;
+}
+
+#foto {
+  border-radius: 5%;
+  overflow: hidden;
+  border-style: solid;
+  border-width: thick;
+}

@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light my-5">
+	<div class="container-fluid">
+		<div class="navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-link">
+					<a class="nav-link" [routerLinkActive]="'selected'" routerLink="/estudios">Estudios</a>
+				</li>
+				<li class="nav-link">
+					<a class="nav-link" [routerLinkActive]="'selected'" routerLink="/conocimientos">Conocimientos</a>
+				</li>
+				<li class="nav-link">
+					<a class="nav-link" [routerLinkActive]="'selected'" routerLink="/experiencia">Experiencia</a>
+				</li>
+				<li class="nav-link">
+					<a class="nav-link" [routerLinkActive]="'selected'" routerLink="/proyectos">Proyectos</a>
+				</li>
+				<li class="nav-link">
+					<a class="nav-link" [routerLinkActive]="'selected'" routerLink="/certificaciones">Certificaciones</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<router-outlet></router-outlet>
