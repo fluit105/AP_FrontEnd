@@ -1,15 +1,4 @@
-import { Component } from '@angular/core';
-
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-})
-export class AppComponent {
-  title = 'FrontEnd';
-}
-
-/* let currentCategory: string | null = null;
+let currentCategory = null;
 let showWidth = true;
 
 function detectViewportSize() {
@@ -33,4 +22,4 @@ function detectViewportSize() {
 }
 
 detectViewportSize();
-window.addEventListener('resize', detectViewportSize); */
+window.addEventListener('resize', detectViewportSize);

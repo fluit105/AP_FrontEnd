@@ -6,14 +6,18 @@ import { CertificacionesComponent } from "./certificaciones/certificaciones.comp
 import { ConocimientosComponent } from "./conocimientos/conocimientos.component";
 import { ExperienciaComponent } from "./experiencia/experiencia.component";
 import { ProyectosComponent } from "./proyectos/proyectos.component";
+import { HomeComponent } from "./home/home.component";
+import { AcercaDePaginaComponent } from "./acerca-de-pagina/acerca-de-pagina.component";
 
 const routes: Routes = [
-	{ path: '', redirectTo: '/estudios', pathMatch: 'full' },
+	{ path: '', redirectTo: '/home', pathMatch: 'full' },
+	{ path: 'home', component: HomeComponent },
 	{ path: 'estudios', component: EstudiosComponent },
 	{ path: 'certificaciones', component: CertificacionesComponent },
 	{ path: 'conocimientos', component: ConocimientosComponent },
 	{ path: 'experiencia', component: ExperienciaComponent },
 	{ path: 'proyectos', component: ProyectosComponent },
+	{ path: 'acerca-de-esta-pagina', component: AcercaDePaginaComponent },
 	{ path: '**', component: PagenotfoundComponent },
 ];
 

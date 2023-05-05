@@ -1,0 +1,37 @@
+.card-container {
+  margin-top: 20px;
+  background-color: rgb(20, 133, 213);
+  padding: 2rem;
+  border: 2px solid;
+}
+
+@media (min-width: 1200px) {
+  .h4 {
+    font-size: 20px;
+  }
+}
+
+/* if device has a touch screen */
+@media (any-pointer: coarse) {
+}
+
+/* if device has no touch screen */
+@media (any-pointer: fine) {
+  .card-img-top {
+    filter: blur(2px);
+    transition: filter 0.2s ease-in-out;
+  }
+
+  .card-img-top:hover {
+    filter: none;
+  }
+}
+
+.card-text {
+  color: black;
+  transition: color 0.2s ease-in-out;
+}
+
+.card:hover .card-text {
+  color: rgb(235, 157, 0);
+}
