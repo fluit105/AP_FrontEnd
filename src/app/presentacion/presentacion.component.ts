@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { BasicInfoService } from '../servicies/basic-info.service';
+import { PersonasService } from '../servicies/pull-personas-service.service';
+import { UrlsService } from '../servicies/pull-urls-service.service';
+import { Persona } from '../Clases/persona';
+import { Url } from '../Clases/url';
 
 @Component({
 	selector: 'app-presentacion',
@@ -7,14 +10,29 @@ import { BasicInfoService } from '../servicies/basic-info.service';
 	styleUrls: ['./presentacion.component.css']
 })
 export class PresentacionComponent implements OnInit {
-	infoBasica: any;
 
-	constructor(private datosBasicos: BasicInfoService) { }
+	persona: Persona[];
+	url: Url[];
+
+	constructor(
+		private personasServicio : PersonasService,
+		private urlsServicio : UrlsService,
+		) { }
 
 	ngOnInit(): void {
-		this.datosBasicos.obtenerDatos().subscribe(data => {
-			this.infoBasica = data;
-		});
+		this.obtenerDatosPersonas();
 	}
-	
+
+	private obtenerDatosPersonas() {
+		this.personasServicio.obtenerPersonas().subscribe(dato => {
+			this.persona = dato;
+		})
+	} 
+
+	private obtenerDatosURLs() {
+		this.urlsServicio.obtenerURLs().subscribe(dato => {
+			this.url = dato;
+		})
+	} 
+
 }
