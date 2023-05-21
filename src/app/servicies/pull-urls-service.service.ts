@@ -8,12 +8,12 @@ import { Url } from '../Clases/url';
 })
 export class UrlsService {
 
-	private urls_URL = "http://localhost:8080/api/url_fotos";
+	private urls_URL = "https://portfolio-backend-t3x5.onrender.com/api/url_fotos";
 
 	constructor(private httpClient : HttpClient) { }
 	
 	obtenerURLs(): Observable<Url[]> {
-		return this.httpClient.get<Url[]>(`${this.urls_URL}`);
+		return this.httpClient.get<Url[]>(this.urls_URL);
 	}
 
 }

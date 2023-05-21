@@ -8,12 +8,12 @@ import { Persona } from '../Clases/persona';
 })
 export class PersonasService {
 
-	private personasURL = "http://localhost:8080/api/personas";
+	private personasURL = "https://portfolio-backend-t3x5.onrender.com/api/personas";
 
 	constructor(private httpClient : HttpClient) { }
 	
 	obtenerPersonas(): Observable<Persona[]> {
-		return this.httpClient.get<Persona[]>(`${this.personasURL}`);
+		return this.httpClient.get<Persona[]>(this.personasURL);
 	}
 
 }

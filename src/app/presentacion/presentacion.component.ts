@@ -21,6 +21,7 @@ export class PresentacionComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.obtenerDatosPersonas();
+		this.obtenerDatosURLs();
 	}
 
 	private obtenerDatosPersonas() {
@@ -32,6 +33,8 @@ export class PresentacionComponent implements OnInit {
 	private obtenerDatosURLs() {
 		this.urlsServicio.obtenerURLs().subscribe(dato => {
 			this.url = dato;
+			/* console.log(this.url[0].urlFoto); */
+			
 		})
 	} 
 
