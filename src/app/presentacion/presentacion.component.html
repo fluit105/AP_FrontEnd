@@ -2,25 +2,28 @@
 	<div class="row align-items-center m-0">
 		<div class="col-12 col-lg-10">
 			<!-- Presentacion -->
+			<p *ngIf="persona == null" class="h1 mt-3 titulos">Cargando...</p>
 			<ng-container *ngIf="persona && persona.length > 0">
-			<p class="titulos display-2 mt-3 pb-1">{{persona[0].nombre}} {{persona[0].apellido}}</p>
-			<br>
-			<p class="titulos h2">{{persona[0].ocupacion}}</p>
-			<br>
-			<p class="titulos italica h2">{{persona[0].nivel}}</p>
-			<!-- Resumen Personal -->
-			<div class="resumen mt-5 d-block pr-3">
-				<h1 class="titulos m-0" style="font-size: 32px;">Resumen personal</h1>
-				<p class="titulos resumen mt-2">{{persona[0].resumen}}
-				</p>
-			</div>
-		</ng-container>
+				<p class="titulos display-2 mt-3 pb-1">{{persona[0].nombre}} {{persona[0].apellido}}</p>
+				<br>
+				<p class="titulos h2">{{persona[0].ocupacion}}</p>
+				<br>
+				<p class="titulos italica h2">{{persona[0].nivel}}</p>
+				<!-- Resumen Personal -->
+				<div class="resumen mt-5 d-block pr-3">
+					<h1 class="titulos m-0 mb-1" style="font-size: 40px;">Resumen personal</h1>
+					<div *ngFor="let parrafo of resumen" class="titulos resumen mt-1">
+						<p>{{ parrafo }}</p>
+					</div>
+				</div>
+			</ng-container>
 		</div>
 		<div class="col-12 col-lg-2">
 			<!-- Foto -->
 			<div class="foto-container align-items-center">
 				<div *ngFor="let url_i of url">
-					<img *ngIf="url_i.descripcion === 'Foto de perfil de Santiago Valdez'" [src]="url_i.urlFoto" id="foto" class="img-fluid card-img-top" [alt]="url_i.descripcion">
+					<img *ngIf="url_i.descripcion === 'Foto de perfil de Santiago Valdez'" [src]="url_i.urlFoto"
+						id="foto" class="img-fluid card-img-top" [alt]="url_i.descripcion">
 				</div>
 			</div>
 		</div>

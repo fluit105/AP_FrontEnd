@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Url } from '../Clases/url';
-import { UrlsService } from '../servicies/pull-urls-service.service';
+import { UrlsService } from '../services/pull-urls-service.service';
 
 @Component({
   selector: 'app-cardslide',
