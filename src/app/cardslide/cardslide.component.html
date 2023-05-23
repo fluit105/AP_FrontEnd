@@ -1,7 +1,9 @@
-<div class="card-container d-flex justify-content-around">
+<div class="card-container d-flex justify-content-around mb-5">
 	<a routerLinkActive="active" routerLink="/estudios">
 		<div class="card" style="width: 13rem;">
-			<img class="card-img-top" src="/assets/EstudioCard.jpg" alt="Sección de Estudios">
+			<div *ngFor="let url_i of url">
+				<img *ngIf="url_i.descripcion === 'Portada categoría estudio'" [src]="url_i.urlFoto" id="foto" class="img-fluid card-img-top" [alt]="url_i.descripcion">
+			</div>
 			<div class="card-body">
 				<p class="card-text h4">Estudios</p>
 			</div>
@@ -9,7 +11,9 @@
 	</a>
 	<a routerLinkActive="active" routerLink="/conocimientos">
 		<div class="card" style="width: 13rem;">
-			<img class="card-img-top" src="/assets/ConocimientosCard.jpg" alt="Sección de Conocimientos">
+			<div *ngFor="let url_i of url">
+				<img *ngIf="url_i.descripcion === 'Portada categoría conocimientos'" [src]="url_i.urlFoto" id="foto" class="img-fluid card-img-top" [alt]="url_i.descripcion">
+			</div>
 			<div class="card-body">
 				<p class="card-text h4">Conocimientos</p>
 			</div>
@@ -17,7 +21,9 @@
 	</a>
 	<a routerLinkActive="active" routerLink="/experiencia">
 		<div class="card" style="width: 13rem;">
-			<img class="card-img-top" src="/assets/ExperienciaCard.jpg" alt="Sección de Experiencia">
+			<div *ngFor="let url_i of url">
+				<img *ngIf="url_i.descripcion === 'Portada categoría experiencia'" [src]="url_i.urlFoto" id="foto" class="img-fluid card-img-top" [alt]="url_i.descripcion">
+			</div>
 			<div class="card-body">
 				<p class="card-text h4">Experiencia</p>
 			</div>
@@ -25,7 +31,9 @@
 	</a>
 	<a routerLinkActive="active" routerLink="/proyectos">
 		<div class="card" style="width: 13rem;">
-			<img class="card-img-top" src="/assets/ProyectosCard.jpg" alt="Sección de Proyectos">
+			<div *ngFor="let url_i of url">
+				<img *ngIf="url_i.descripcion === 'Portada categoría proyectos'" [src]="url_i.urlFoto" id="foto" class="img-fluid card-img-top" [alt]="url_i.descripcion">
+			</div>
 			<div class="card-body">
 				<p class="card-text h4">Proyectos</p>
 			</div>
@@ -33,7 +41,9 @@
 	</a>
 	<a routerLinkActive="active" routerLink="/certificaciones">
 		<div class="card" style="width: 13rem;">
-			<img class="card-img-top" src="/assets/CertificacionesCard.jpg" alt="Sección de Certificaciones">
+			<div *ngFor="let url_i of url">
+				<img *ngIf="url_i.descripcion === 'Portada categoría certificaciones'" [src]="url_i.urlFoto" id="foto" class="img-fluid card-img-top" [alt]="url_i.descripcion">
+			</div>
 			<div class="card-body">
 				<p class="card-text h4">Certificaciones</p>
 			</div>
@@ -41,7 +51,9 @@
 	</a>
 	<a routerLinkActive="active" routerLink="/acerca-de-esta-pagina">
 		<div class="card" style="width: 13rem;">
-			<img class="card-img-top" src="/assets/InfoCard.jpg" alt="Sección de datos interesantes sobre esta página">
+			<div *ngFor="let url_i of url">
+				<img *ngIf="url_i.descripcion === 'Portada categoría acerca de esta página'" [src]="url_i.urlFoto" id="foto" class="img-fluid card-img-top" [alt]="url_i.descripcion">
+			</div>
 			<div class="card-body">
 				<p class="card-text h4 fst-italic">Info de la Web</p>
 			</div>

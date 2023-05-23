@@ -33,8 +33,6 @@ export class PresentacionComponent implements OnInit {
 	private obtenerDatosURLs() {
 		this.urlsServicio.obtenerURLs().subscribe(dato => {
 			this.url = dato;
-			/* console.log(this.url[0].urlFoto); */
-			
 		})
 	} 
 
