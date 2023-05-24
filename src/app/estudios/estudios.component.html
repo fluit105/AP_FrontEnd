@@ -3,12 +3,18 @@
 	<div class="container-fluid mt-3">
 		<p *ngIf="estudio == null" class="h1 mt-3 titulos">Cargando...</p>
 		<ng-container *ngIf="estudio != null">
-			<ng-container *ngFor="let estudio_i of estudio">
-				<p class="titulos display-4 mt-3 fst-italic pb-1" style="color: coral;">{{estudio_i.titulo}}</p>
-				<div *ngFor="let parrafo of descripcion" class="titulos descripcion mt-1">
+			<div class="mb-5" *ngFor="let estudio_i of estudio">
+				<div class="d-flex align-items-center">
+					<p class="titulos display-4 mt-3 fst-italic pb-1" style="color: coral;">{{estudio_i.titulo}}</p>
+					<div *ngFor="let url_i of url">
+						<img *ngIf="url_i.descripcion === 'Logo colegio Santa María'" [src]="url_i.urlFoto" id="foto"
+							class="img-fluid logo" [alt]="url_i.descripcion">
+					</div>
+				</div>
+				<div *ngFor="let parrafo of estudio_i.descripcion.split('\n\n')" class="titulos descripcion mt-1">
 					<p>{{ parrafo }}</p>
 				</div>
-			</ng-container>
+			</div>
 		</ng-container>
 	</div>
 </div>

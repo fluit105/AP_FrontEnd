@@ -13,33 +13,26 @@ export class EstudiosComponent implements OnInit {
 
   estudio: Estudio[];
   url: Url[];
-  descripcion: string[];
 
   constructor(
     private estudiosServicio: PullEstudiosServiceService,
-		private urlsServicio: UrlsService
-	) { }
+    private urlsServicio: UrlsService
+  ) { }
 
   ngOnInit(): void {
     this.obtenerDatosEstudios();
-		this.obtenerDatosURLs();
+    this.obtenerDatosURLs();
   }
 
   private obtenerDatosURLs() {
-		this.urlsServicio.obtenerURLs().subscribe(dato => {
-			this.url = dato;
-		})
-	}
+    this.urlsServicio.obtenerURLs().subscribe(dato => {
+      this.url = dato;
+    })
+  }
 
   private obtenerDatosEstudios() {
-		this.estudiosServicio.obtenerEstudios().subscribe(dato => {
-			this.estudio = dato;
-      this.stringProcessing();
-		})
-	}
-
-  private stringProcessing() {
-		this.descripcion = this.estudio[0].descripcion.split('\n\n');
-	}
-
+    this.estudiosServicio.obtenerEstudios().subscribe(dato => {
+      this.estudio = dato;
+    })
+  }
 }

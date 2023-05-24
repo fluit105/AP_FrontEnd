@@ -1,3 +1,9 @@
 .descripcion {
 	font-size: 20px;
 }
+
+.logo {
+	width: 78px;
+	height: 78px;
+	margin-left: 10px;
+}
